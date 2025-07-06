@@ -12,7 +12,20 @@ Predict stock prices using historical data and machine learning.
 - **Linear Regression RMSE:** ~5.23 (example)
 - **LSTM RMSE:** ~3.87 (example)
 
-![Sample Plot](sample_plot.png)
+![Sample Plot](stockpricepredictor/sample_plot.png)
+
+## Project Structure
+- `main.py`: CLI entry point for training and prediction
+- `src/`: Source code modules
+  - `data_utils.py`: Data download and feature engineering
+  - `models.py`: Model definitions
+  - `train.py`: Training and evaluation logic
+- `notebooks/`: Jupyter notebooks for EDA
+- `data/`: Downloaded stock data (in .gitignore)
+- `models/`: Saved models (in .gitignore)
+- `requirements.txt`: Dependencies
+- `LICENSE`: License file
+- `.gitignore`: Ignore data, models, etc.
 
 ## Setup
 1. Clone the repository or copy the project folder.
@@ -22,26 +35,13 @@ Predict stock prices using historical data and machine learning.
    ```
 
 ## Usage
-1. Run the main script:
-   ```bash
-   python main.py
-   ```
-2. Follow the prompts to enter a stock ticker and date range.
-
-## Project Structure
-- `main.py`: Main script to run the project
-- `data/`: Folder for storing downloaded stock data
-- `notebooks/`: Jupyter notebooks for exploration
-- `models/`: Saved models
-
-## Requirements
-- Python 3.7+
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- yfinance
-- tensorflow (for LSTM)
+Run the main script from the project root:
+```bash
+python main.py --ticker AAPL --start_date 2020-01-01 --end_date 2023-01-01
+```
 
 ## Author
 Aman Jaiswal
+
+
+[samplePlotImage]: stockpricepredictor/sample_plot.png
